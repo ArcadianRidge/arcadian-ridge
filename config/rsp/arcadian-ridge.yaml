@@ -1,0 +1,27 @@
+initiative: arcadian-ridge
+epicPrefix: ARCR
+domain: arcadian-ridge
+taskTypePrefix: arcr-
+requiredEpics:
+  - ARCR-1
+  - ARCR-2
+  - ARCR-3
+  - ARCR-4
+  - ARCR-5
+  - ARCR-6
+  - ARCR-7
+  - ARCR-8
+  - ARCR-9
+  - ARCR-10
+  - ARCR-11
+  - ARCR-12
+bddDirs:
+  - __tests__/portals/arcadian
+metering:
+  projectIdEnv: ARCR_DEFAULT_PROJECT_ID
+  defaultProjectId: arcadian-ridge
+gates:
+  - G1
+  - G2
+  - G3
+  - G4

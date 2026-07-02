@@ -1,0 +1,32 @@
+{
+  "name": "arcadian-ridge",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @arcr/db && npm run build -w @arcr/engine && npm run build -w @arcr/rak-bridge && npm run build -w @arcr/command && npm run build -w @arcr/registry && npm run build -w @arcr/collectors && npm run build -w @arcr/acquisition && npm run build -w @arcr/underwriting && npm run build -w @arcr/locator && npm run build -w @arcr/outreach && npm run build -w @arcr/intake && npm run build -w @arcr/engagement && npm run build -w @arcr/filings && npm run build -w @arcr/trust && npm run build -w @arcr/memo && npm run build -w @arcr/verify && npm run build -w @arcr/console && npm run build -w @arcr/inbound",
+    "test": "vitest run",
+    "test:arcr": "vitest run __tests__/portals/arcadian",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "doctor": "node scripts/doctor.mjs",
+    "link:rak-sdk": "node scripts/link-rak-sdk.mjs",
+    "rsp:check": "node scripts/rsp/check-arcadian-ridge.mjs",
+    "db:migrate": "npm run migrate -w @arcr/db",
+    "db:seed-demo": "npm run seed-demo -w @arcr/db",
+    "dev:console": "npm run dev -w @arcr/console",
+    "dev:inbound": "npm run dev -w @arcr/inbound",
+    "worker:collectors": "npm run collectors -w @arcr/worker",
+    "worker:pipeline": "npm run pipeline -w @arcr/worker"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
